@@ -26,10 +26,10 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ## Built with
 
-:gear: Semantic HTML5 markup  
-:gear: CSS  
-:gear: Desktop-first workflow  
-:gear: Sass
+Semantic HTML5 markup  
+Tailwind
+Mobile-first workflow  
+JavaScript
 
 <!-- ## Feedback -->
 

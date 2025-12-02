@@ -1,0 +1,45 @@
+@use 'reset'; 
+@use 'footer'; 
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap'); 
+
+body { 
+    background-color: hsl(212, 23%, 69%); // gradient? linear vertical? 
+    font-family: 'manrope', sans-serif;
+    text-align: left;
+    font-size: 0.8em; 
+    min-width: 100svw; 
+    height: 100%; 
+}
+
+header { 
+    background-image: url(../images/drawers.jpg);
+    min-width: 100%;
+    background-repeat: no-repeat; 
+    border-top-right-radius: 16px; 
+    border-top-left-radius: 16px; 
+}
+
+main { 
+    background-color: hsl(210, 46%, 95%);
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    // drop-shadow 
+    padding: 30px 30px 10px 30px; 
+    margin: 30px 20px; 
+    color: hsl(217, 19%, 35%); // title only 
+}
+
+.details { 
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author-div { 
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}

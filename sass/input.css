@@ -51,4 +51,16 @@ main {
   padding: 30px 30px 10px 30px;
   margin: 30px 20px;
   color: hsl(217, 19%, 35%);
+}
+
+.details {
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-div {
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
 }/*# sourceMappingURL=input.css.map */

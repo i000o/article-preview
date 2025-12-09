@@ -14,22 +14,19 @@ body {
     align-items: center;
     min-width: 100svw; 
     height: 100svh; 
-    // margin: 30px 20px; 
-    // margin: 0; 
 }
 
 .card { 
-    // background-color: hsl(210, 46%, 95%);
     background-color: white;
     border-radius: 16px;
-    // drop-shadow 
     padding: 0 0 10px 0; 
     margin: 30px 20px; 
     color: hsl(217, 19%, 35%); // title only 
     max-width: 22rem; 
+    // drop-shadow 
 }
 
-img { // how to crop? 
+img { 
     width: 100%; 
     margin: 0; 
     padding: 0; 
@@ -39,10 +36,10 @@ img { // how to crop?
     object-fit: cover; // never used this before! 
 }
 
-section { 
+.text-content { 
     padding: 20px 30px 20px 30px; 
-    // margin: 40px 20px; 
 }
+
 .details { 
     flex-flow: row nowrap;
     justify-content: space-between;

@@ -78,6 +78,7 @@ img {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+  margin: 10px -20px;
 }
 .author-div .author-icon {
   width: 15%;
@@ -108,11 +109,11 @@ img {
 
 .share-button {
   border-radius: 50%;
-  background: url(../images/icon-share.svg) no-repeat center;
-  min-width: 25px;
-  min-height: 25px;
+  background: url(../images/icon-share.svg) no-repeat center hsla(212, 23%, 69%, 0.3);
+  min-width: 30px;
+  min-height: 30px;
   border: none;
-  margin-left: 70px;
+  margin-left: 80px;
 }
 
 /*# sourceMappingURL=output.css.map */

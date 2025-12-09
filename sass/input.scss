@@ -57,6 +57,7 @@ img {
     flex-flow: row nowrap; 
     justify-content: flex-start;
     align-items: center;
+    margin: 10px -20px; 
 
     .author-icon { 
         width: 15%; 
@@ -91,10 +92,9 @@ img {
 
     .share-button { 
         border-radius: 50%;
-        background: url(../images/icon-share.svg) no-repeat center; // nice to use this for the first time 
-        min-width: 25px; 
-        min-height: 25px; 
+        background: url(../images/icon-share.svg) no-repeat center hsl(212, 23%, 69%, 30%); // nice to use this for the first time 
+        min-width: 30px; 
+        min-height: 30px; 
         border: none; 
-        // justify-self: flex-end; didn't work? 
-        margin-left: 70px; 
+        margin-left: 80px; // justify-self didn't work 
     }

@@ -58,7 +58,7 @@ img {
 }
 
 .text-content {
-  padding: 20px 30px 20px 30px;
+  padding: 20px 30px 10px 30px;
 }
 
 .title {
@@ -68,8 +68,8 @@ img {
 
 .subtitle {
   color: hsl(212, 23%, 69%);
-  font-size: 1.05em;
-  line-height: 160%;
+  font-size: 1em;
+  line-height: 170%;
   font-weight: 500;
 }
 
@@ -78,7 +78,7 @@ img {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  margin: 10px -20px;
+  margin: 10px -20px 0 -20px;
 }
 .author-div .author-icon {
   width: 15%;

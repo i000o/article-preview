@@ -84,8 +84,9 @@ section {
 
 .subtitle {
   color: hsl(212, 23%, 69%);
-  font-size: 1em;
+  font-size: 1.05em;
   line-height: 160%;
+  font-weight: 500;
 }
 
 .title {

@@ -40,6 +40,18 @@ img {
     padding: 20px 30px 20px 30px; 
 }
 
+.title { 
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: hsl(212, 23%, 69%); 
+    font-size: 1.05em; 
+    line-height: 160%;
+    font-weight: 500;
+}
+
 .details { 
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -48,7 +60,7 @@ img {
 
 .author-div { 
     display: flex; // do not forget this when using shorthand flex! 
-    flex-flow: row wrap; // not rendering 
+    flex-flow: row wrap; 
     justify-content: flex-start;
     align-items: center;
 
@@ -60,16 +72,4 @@ img {
         padding: 5px;
         margin: 10px;  
     }
-}
-
-.subtitle {
-    color: hsl(212, 23%, 69%); 
-    font-size: 1.05em; 
-    line-height: 160%;
-    font-weight: 500;
-}
-
-.title { 
-    font-size: 1.3em;
-    font-weight: 700;
 }

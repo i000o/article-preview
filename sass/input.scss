@@ -69,7 +69,7 @@ img {
     }
 }
 
-.author-date { 
+.author-date { // add js-div here? 
     display: flex; 
     flex-flow: column; 
     align-items: flex-start;
@@ -90,13 +90,56 @@ img {
     }
 }
 
-    .share-button { 
+    .share-button { // can I just change the bg color on js? 
         border-radius: 50%;
         background: url(../images/icon-share.svg) no-repeat center hsl(212, 23%, 69%, 30%); // nice to use this for the first time 
         min-width: 30px; 
         min-height: 30px; 
         border: none; 
         margin-left: 80px; // justify-self didn't work 
+    }
+
+    .js-div { 
+        display: flex;
+        flex-flow: row nowrap; 
+        justify-content: space-between;
+        align-items: flex-start; 
+        background-color: hsl(217, 19%, 35%);
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+        height: auto; 
+        // width needs to touch the edge of card 
+    }
+
+    .icons-list { 
+        display: flex; 
+        flex-shrink: 0; // this stops them shrinking but now they're too big 
+    }
+
+    .share-button-js { // see .share-button - might not need this 
+        background: url(../images/icon-share.svg) hsl(214, 17%, 51%) no-repeat center; 
+        border: none; 
+        min-width: 30px; 
+        min-height: 30px; 
+        border-radius: 50%;
+        margin-left: 80px; 
+    }
+
+    .icons-list img { 
+        border-radius: 50%; 
+        margin: 5px; 
+    }
+
+    .share-text { 
+        text-transform: uppercase;
+        color: hsl(214, 17%, 51%); 
+        letter-spacing: 7px; 
+        margin: 20px 10px 20px 20px; 
+    }
+
+    .icons-list { 
+        color: white; 
+        background: hsl(217, 19%, 35%);
     }
 
     @media screen and (min-width: 768px) { 

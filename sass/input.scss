@@ -52,19 +52,13 @@ img {
     font-weight: 500;
 }
 
-.details { 
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .author-div { 
     display: flex; // do not forget this when using shorthand flex! 
-    flex-flow: row wrap; 
+    flex-flow: row nowrap; 
     justify-content: flex-start;
     align-items: center;
 
-    img { 
+    .author-icon { 
         width: 15%; 
         height: 15%; 
         border-radius: 50%;
@@ -73,3 +67,34 @@ img {
         margin: 10px;  
     }
 }
+
+.author-date { 
+    display: flex; 
+    flex-flow: column; 
+    align-items: flex-start;
+    justify-content: center;
+
+    .author, .date { 
+        margin: 2px; 
+        font-size: 1em; 
+    }
+
+    .author { 
+        font-weight: 700;
+    }
+
+    .date { 
+        font-weight: 500; 
+        color: hsl(212, 23%, 69%);
+    }
+}
+
+    .share-button { 
+        border-radius: 50%;
+        background: url(../images/icon-share.svg) no-repeat center; // nice to use this for the first time 
+        min-width: 25px; 
+        min-height: 25px; 
+        border: none; 
+        // justify-self: flex-end; didn't work? 
+        margin-left: 70px; 
+    }

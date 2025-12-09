@@ -4,34 +4,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap'); 
 
 body { 
-    background-color: hsl(212, 23%, 69%); // gradient? linear vertical? 
+    background-color: hsl(212, 23%, 69%, 50%); // gradient? linear vertical? 
     font-family: 'manrope', sans-serif;
     text-align: left;
     font-size: 0.8em; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-width: 100svw; 
-    height: 100%; 
+    height: 100svh; 
+    // margin: 30px 20px; 
+    // margin: 0; 
 }
 
-header { 
-    background-image: url(../images/drawers.jpg);
-    min-width: 100%;
-    background-repeat: no-repeat; 
+// header { 
+//     background-image: url(/images/drawers.jpg);
+//     // background-size: 100%;
+//     background-repeat: no-repeat;
+//     height: auto; 
+//     min-width: 100%;
+//     background-repeat: no-repeat; 
+//     border-top-right-radius: 16px; 
+//     border-top-left-radius: 16px; 
+// }
+
+.card { 
+    // background-color: hsl(210, 46%, 95%);
+    background-color: white;
+    border-radius: 16px;
+    // drop-shadow 
+    padding: 0 0 10px 0; 
+    margin: 30px 20px; 
+    color: hsl(217, 19%, 35%); // title only 
+    max-width: 22rem; 
+}
+
+img { // how to crop? 
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
     border-top-right-radius: 16px; 
     border-top-left-radius: 16px; 
 }
 
-main { 
-    background-color: hsl(210, 46%, 95%);
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 16px;
-    // drop-shadow 
-    padding: 30px 30px 10px 30px; 
-    margin: 30px 20px; 
-    color: hsl(217, 19%, 35%); // title only 
+section { 
+    padding: 20px 30px 20px 30px; 
+    // margin: 40px 20px; 
 }
-
 .details { 
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -39,7 +59,28 @@ main {
 }
 
 .author-div { 
-    flex-flow: row wrap;
+    display: flex; // do not forget this when using shorthand flex! 
+    flex-flow: row wrap; // not rendering 
     justify-content: flex-start;
     align-items: center;
+
+    img { 
+        width: 15%; 
+        height: 15%; 
+        border-radius: 50%;
+        order: -1; 
+        padding: 5px;
+        margin: 10px;  
+    }
+}
+
+.subtitle {
+    color: hsl(212, 23%, 69%); 
+    font-size: 1em; 
+    line-height: 160%;
+}
+
+.title { 
+    font-size: 1.3em;
+    font-weight: 700;
 }

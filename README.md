@@ -35,8 +35,8 @@ JavaScript
 
 ## Lessons
 
-1.
-2.
+1. Couldn't get `<header>` `background-image: url();` to work. Used `<img>` in HTML instead.
+2. Layout was so annoying
 3.
 4.
 

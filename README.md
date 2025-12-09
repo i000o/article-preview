@@ -37,8 +37,8 @@ JavaScript
 
 1. Couldn't get `<header>` `background-image: url();` to work. Used `<img>` in HTML instead.
 2. Layout was so annoying
-3.
-4.
+3. `background` shorthand used for the first time
+4. `object-fit` for img was used - really useful
 
 ## Development
 

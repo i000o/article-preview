@@ -98,3 +98,67 @@ img {
         border: none; 
         margin-left: 80px; // justify-self didn't work 
     }
+
+    @media screen and (min-width: 768px) { 
+
+        .card { 
+            max-width: 35rem; 
+            max-height: 250px; 
+            display: flex; 
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 0; 
+        }
+
+        img { 
+            width: 40%;
+            border-top-right-radius: 0; 
+            border-bottom-left-radius: 16px; 
+            min-height: 100%; 
+            object-position: 0 50%; // never used before - must be in combo with object-fit 
+        }
+
+        .text-content { 
+            width: 60%; 
+        }
+
+        .title { 
+            font-size: 1.1em; 
+            margin-right: 15px; 
+        }
+        
+        .subtitle { 
+            font-size: 0.8em; 
+        }
+
+        .author-div { 
+
+            margin-top: -10px; 
+
+            .author, .date { 
+                font-size: 0.8em; 
+        }
+
+            .author-icon { 
+                width: 13%; 
+                height: 13%; 
+                margin: 10px;  
+            }
+
+            .author-date { 
+                margin-left: -5px; 
+            }
+        }
+
+        .share-button { 
+            margin-left: 125px; 
+            min-height: 25px; 
+            min-width: 25px; 
+        }
+
+        footer { 
+            position: absolute; 
+            bottom: 100px; 
+        }
+    }

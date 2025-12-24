@@ -41,7 +41,7 @@ body {
 .card {
   background-color: white;
   border-radius: 16px;
-  padding: 0 0 10px 0;
+  padding: 0;
   margin: 30px 20px;
   color: hsl(217, 19%, 35%);
   max-width: 22rem;
@@ -75,7 +75,7 @@ img {
 }
 
 .author-div {
-  display: flex;
+  display: none;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
@@ -119,9 +119,9 @@ img {
 
 .js-div {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: hsl(217, 19%, 35%);
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 16px;
@@ -139,24 +139,28 @@ img {
   min-width: 30px;
   min-height: 30px;
   border-radius: 50%;
-  margin-left: 80px;
+  margin-left: 10px;
 }
 
 .icons-list img {
   border-radius: 50%;
   margin: 5px;
+  padding: 0 3px;
+  max-width: 80%;
 }
 
 .share-text {
   text-transform: uppercase;
   color: hsl(214, 17%, 51%);
   letter-spacing: 7px;
-  margin: 20px 10px 20px 20px;
+  margin: 20px;
+  margin-right: 0;
 }
 
 .icons-list {
   color: white;
   background: hsl(217, 19%, 35%);
+  padding: 0;
 }
 
 @media screen and (min-width: 768px) {

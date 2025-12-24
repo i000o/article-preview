@@ -19,7 +19,7 @@ body {
 .card { 
     background-color: white;
     border-radius: 16px;
-    padding: 0 0 10px 0; 
+    padding: 0; 
     margin: 30px 20px; 
     color: hsl(217, 19%, 35%); // title only 
     max-width: 22rem; 
@@ -53,7 +53,8 @@ img {
 }
 
 .author-div { 
-    display: flex; // do not forget this when using shorthand flex! 
+    display: none; // temporary while I style JS dynamic content 
+    // display: flex; // do not forget this when using shorthand flex! 
     flex-flow: row nowrap; 
     justify-content: flex-start;
     align-items: center;
@@ -90,7 +91,7 @@ img {
     }
 }
 
-    .share-button { // can I just change the bg color on js? 
+    .share-button { 
         border-radius: 50%;
         background: url(../images/icon-share.svg) no-repeat center hsl(212, 23%, 69%, 30%); // nice to use this for the first time 
         min-width: 30px; 
@@ -101,9 +102,9 @@ img {
 
     .js-div { 
         display: flex;
-        flex-flow: row nowrap; 
-        justify-content: space-between;
-        align-items: flex-start; 
+        flex-flow: row wrap; 
+        justify-content: space-evenly;
+        align-items: center; 
         background-color: hsl(217, 19%, 35%);
         border-bottom-right-radius: 16px;
         border-bottom-left-radius: 16px;
@@ -116,30 +117,35 @@ img {
         flex-shrink: 0; // this stops them shrinking but now they're too big 
     }
 
-    .share-button-js { // see .share-button - might not need this 
+    .share-button-js {
+        // display: none; // js default 
         background: url(../images/icon-share.svg) hsl(214, 17%, 51%) no-repeat center; 
         border: none; 
         min-width: 30px; 
         min-height: 30px; 
         border-radius: 50%;
-        margin-left: 80px; 
+        margin-left: 10px; 
     }
 
     .icons-list img { 
         border-radius: 50%; 
         margin: 5px; 
+        padding: 0 3px; 
+        max-width: 80%; 
     }
 
     .share-text { 
         text-transform: uppercase;
         color: hsl(214, 17%, 51%); 
         letter-spacing: 7px; 
-        margin: 20px 10px 20px 20px; 
+        margin: 20px; 
+        margin-right: 0; 
     }
 
     .icons-list { 
         color: white; 
         background: hsl(217, 19%, 35%);
+        padding: 0; 
     }
 
     @media screen and (min-width: 768px) { 

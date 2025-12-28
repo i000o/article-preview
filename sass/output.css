@@ -74,7 +74,7 @@ img {
 }
 
 .author-div {
-  display: none;
+  display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
@@ -117,14 +117,17 @@ img {
 }
 
 .js-div {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
   align-items: center;
   background-color: hsl(217, 19%, 35%);
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 16px;
   height: auto;
+  width: 100%;
+  margin: 0 -20px 0 0;
+  padding: 0 10px;
 }
 
 .icons-list {
@@ -138,14 +141,7 @@ img {
   min-width: 30px;
   min-height: 30px;
   border-radius: 50%;
-  margin-left: 10px;
-}
-
-.icons-list img {
-  border-radius: 50%;
-  margin: 5px;
-  padding: 0 3px;
-  max-width: 80%;
+  margin-left: 80px;
 }
 
 .share-text {
@@ -160,6 +156,13 @@ img {
   color: white;
   background: hsl(217, 19%, 35%);
   padding: 0;
+  margin-left: 10px;
+}
+.icons-list img {
+  border-radius: 50%;
+  margin: 5px;
+  padding: 0 3px;
+  max-width: 80%;
 }
 
 @media screen and (min-width: 768px) {

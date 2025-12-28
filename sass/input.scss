@@ -26,7 +26,7 @@ body {
     // drop-shadow 
 }
 
-img { 
+img {  // HERO IMAGE 
     width: 100%; 
     margin: 0; 
     padding: 0; 
@@ -53,8 +53,7 @@ img {
 }
 
 .author-div { 
-    display: none; // temporary while I style JS dynamic content 
-    // display: flex; // do not forget this when using shorthand flex! 
+    display: flex; // do not forget this when using shorthand flex! 
     flex-flow: row nowrap; 
     justify-content: flex-start;
     align-items: center;
@@ -70,7 +69,7 @@ img {
     }
 }
 
-.author-date { // add js-div here? 
+.author-date { // add js-div here? // DIV CONTAINING AUTHOR AND DATE
     display: flex; 
     flex-flow: column; 
     align-items: flex-start;
@@ -101,15 +100,17 @@ img {
     }
 
     .js-div { 
-        display: flex;
-        flex-flow: row wrap; 
-        justify-content: space-evenly;
+        display: none;
+        flex-flow: row nowrap; 
+        justify-content: flex-start;
         align-items: center; 
         background-color: hsl(217, 19%, 35%);
         border-bottom-right-radius: 16px;
         border-bottom-left-radius: 16px;
         height: auto; 
-        // width needs to touch the edge of card 
+        width: 100%; 
+        margin: 0 -20px 0 0; 
+        padding: 0 10px; 
     }
 
     .icons-list { 
@@ -117,21 +118,15 @@ img {
         flex-shrink: 0; // this stops them shrinking but now they're too big 
     }
 
-    .share-button-js {
+    .share-button-js { // do I need a seperate button for js? 
         // display: none; // js default 
-        background: url(../images/icon-share.svg) hsl(214, 17%, 51%) no-repeat center; 
+        background: url(../images/icon-share.svg) hsl(214, 17%, 51%) no-repeat center;
         border: none; 
         min-width: 30px; 
         min-height: 30px; 
         border-radius: 50%;
-        margin-left: 10px; 
-    }
-
-    .icons-list img { 
-        border-radius: 50%; 
-        margin: 5px; 
-        padding: 0 3px; 
-        max-width: 80%; 
+        margin-left: 80px; // justify-self didn't work 
+        // I don't know how to stop the arrow icon & button bg from being the same color.
     }
 
     .share-text { 
@@ -146,6 +141,14 @@ img {
         color: white; 
         background: hsl(217, 19%, 35%);
         padding: 0; 
+        margin-left: 10px; 
+
+        img { 
+            border-radius: 50%; // fb isn't round but 
+            margin: 5px; 
+            padding: 0 3px; 
+            max-width: 80%; 
+        }
     }
 
     @media screen and (min-width: 768px) { 
@@ -205,6 +208,8 @@ img {
             min-height: 25px; 
             min-width: 25px; 
         }
+
+        // hover to reveal js panel 
 
         footer { 
             position: absolute; 

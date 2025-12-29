@@ -117,7 +117,6 @@ img {
 }
 
 .js-div {
-  display: none;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
@@ -128,11 +127,6 @@ img {
   width: 100%;
   margin: 0 -20px 0 0;
   padding: 0 10px;
-}
-
-.icons-list {
-  display: flex;
-  flex-shrink: 0;
 }
 
 .share-button-js {
@@ -146,13 +140,15 @@ img {
 
 .share-text {
   text-transform: uppercase;
-  color: hsl(214, 17%, 51%);
+  color: hsl(212, 23%, 69%);
   letter-spacing: 7px;
   margin: 20px;
   margin-right: 0;
 }
 
 .icons-list {
+  display: flex;
+  flex-shrink: 0;
   color: white;
   background: hsl(217, 19%, 35%);
   padding: 0;
@@ -210,6 +206,36 @@ img {
     margin-left: 125px;
     min-height: 25px;
     min-width: 25px;
+  }
+  .js-div {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    left: 750px;
+    max-width: 225px;
+    border-radius: 12px;
+  }
+  .share-text {
+    font-size: 0.7em;
+    margin: 20px;
+  }
+  .share-button-js {
+    display: none;
+  }
+  li {
+    display: flex;
+  }
+  .icons-list {
+    flex-shrink: 1;
+    margin-right: 0;
+    margin-left: 0;
+    align-items: center;
+  }
+  .icons-list img {
+    padding: 0;
+    margin-left: 5px;
+    width: 20px;
   }
   footer {
     position: absolute;

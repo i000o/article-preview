@@ -25,7 +25,10 @@ My goal here is to complete it, hoping to move to Junior challenges exclusively 
 
 ## Outcome
 
-![](./)
+![](/design/mobile-screenshot.png)
+![](/design/mobile-active-screenshot.png)
+![](/design/desktop-screenshot.png)
+![](/design/desktop-active-screenshot.png)
 
 :jigsaw: [Live Site URL]()  
 :pencil2: [Solution URL]()

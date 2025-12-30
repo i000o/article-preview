@@ -6,12 +6,12 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="sass/output.css">
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
   <title>Frontend Mentor | Article preview component</title>
 </head>
 <body>
     <main class="card"> 
-      <img src="images/drawers.jpg"> <!-- add alt attribute-->
+      <img src="images/drawers.jpg" alt="furniture photo">
       <section class="text-content"> 
         <h1 class="title">Shift the overall look and feel by adding these wonderful 
       touches to furniture in your home</h1>
@@ -40,7 +40,7 @@
             <img src="images/icon-pinterest.svg" alt="pinterest-icon"> 
           </li>
         </ol>
-        <button type="button" class="share-button-js"></button>
+        <button type="button" class="share-button-js"></button> <!-- This button really does nothing, there should only be one, not two. This needs a refactor.-->
       </div>
     </main>
     <footer> 

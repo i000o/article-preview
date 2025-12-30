@@ -30,8 +30,8 @@ My goal here is to complete it, hoping to move to Junior challenges exclusively 
 ![](/design/desktop-screenshot.png)
 ![](/design/desktop-active-screenshot.png)
 
-:jigsaw: [Live Site URL]()  
-:pencil2: [Solution URL]()
+:jigsaw: [Live Site URL](https://i000o.github.io/article-preview/)  
+:pencil2: [Solution URL](https://www.frontendmentor.io/solutions/article-preview-component-js-6v2Jmngb7U)
 
 ## Built with
 

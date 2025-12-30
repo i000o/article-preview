@@ -90,6 +90,10 @@ img {
   margin: 10px;
 }
 
+.author-div.is-hidden {
+  display: none;
+}
+
 .author-date {
   display: flex;
   flex-flow: column;
@@ -115,9 +119,11 @@ img {
   min-height: 30px;
   border: none;
   margin-left: 80px;
+  cursor: pointer;
 }
 
 .js-div {
+  display: none;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
@@ -130,7 +136,12 @@ img {
   padding: 0 10px;
 }
 
+.js-div.is-open {
+  display: flex;
+}
+
 .share-button-js {
+  display: none;
   background: url(../images/icon-share.svg) hsl(214, 17%, 51%) no-repeat center;
   border: none;
   min-width: 30px;
@@ -171,6 +182,7 @@ img {
     justify-content: center;
     align-items: center;
     padding-bottom: 0;
+    position: relative;
   }
   img {
     width: 40%;
@@ -210,13 +222,29 @@ img {
     min-width: 25px;
   }
   .js-div {
+    visibility: hidden;
     position: absolute;
+    bottom: 75px;
+    left: 400px;
     display: flex;
     flex-direction: row;
     height: 40px;
-    left: 750px;
     max-width: 225px;
     border-radius: 12px;
+  }
+  .js-div::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid hsl(217, 19%, 35%);
+    bottom: -8px;
+    right: 95px;
+  }
+  .js-div.is-open {
+    visibility: visible;
   }
   .share-text {
     font-size: 0.7em;

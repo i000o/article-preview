@@ -69,6 +69,10 @@ img {  // HERO IMAGE
     }
 }
 
+.author-div.is-hidden { // JS will toggle this when the share button is clicked 
+    display: none; // instead of display: none? 
+}
+
 .author-date { // add js-div here? // DIV CONTAINING AUTHOR AND DATE
     display: flex; 
     flex-flow: column; 
@@ -97,163 +101,183 @@ img {  // HERO IMAGE
         min-height: 30px; 
         border: none; 
         margin-left: 80px; // justify-self didn't work 
+        cursor: pointer; 
     }
+
+.js-div { 
+    display: none; // hidden by default - removed from the stack, different from visibility: hidden; 
+    flex-flow: row nowrap; 
+    justify-content: flex-start;
+    align-items: center; 
+    background-color: hsl(217, 19%, 35%);
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    height: auto; 
+    width: 100%; 
+    margin: 0 -20px 0 0; 
+    padding: 0 10px; 
+}
+
+.js-div.is-open { 
+    display: flex;
+}
+
+.share-button-js { // do I need a seperate button for js? 
+    display: none; // js default - does this need to be here if the parent is set to display: none; ? 
+    background: url(../images/icon-share.svg) hsl(214, 17%, 51%) no-repeat center;
+    border: none; 
+    min-width: 30px; 
+    min-height: 30px; 
+    border-radius: 50%;
+    margin-left: 80px; // justify-self didn't work 
+    // I don't know how to stop the arrow icon & button bg from being the same color.
+}
+
+.share-text { 
+    text-transform: uppercase;
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 7px; 
+    margin: 20px; 
+    margin-right: 0; 
+}
+
+.icons-list { 
+    display: flex; 
+    flex-shrink: 0; // this stops them shrinking but now they're too big 
+    color: white; 
+    background: hsl(217, 19%, 35%);
+    padding: 0; 
+    margin-left: 10px; 
+
+    img { 
+        border-radius: 50%; // fb isn't round but 
+        margin: 5px; 
+        padding: 0 3px; 
+        max-width: 80%; 
+    }
+}
+
+@media screen and (min-width: 768px) { 
+
+    .card { 
+        max-width: 35rem; 
+        max-height: 250px; 
+        display: flex; 
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0; 
+        position: relative; // for the share panel 
+    }
+
+    img { 
+        width: 40%;
+        border-top-right-radius: 0; 
+        border-bottom-left-radius: 16px; 
+        min-height: 100%; 
+        object-position: 0 50%; // never used before - must be in combo with object-fit 
+    }
+
+    .text-content { 
+        width: 60%; 
+    }
+
+    .title { 
+        font-size: 1.1em; 
+        margin-right: 15px; 
+    }
+    
+    .subtitle { 
+        font-size: 0.8em; 
+    }
+
+    .author-div { 
+
+        margin-top: -10px; 
+
+        .author, .date { 
+            font-size: 0.8em; 
+    }
+
+        .author-icon { 
+            width: 13%; 
+            height: 13%; 
+            margin: 10px;  
+        }
+
+        .author-date { 
+            margin-left: -5px; 
+        }
+    }
+
+    .share-button { 
+        margin-left: 125px; 
+        min-height: 25px; 
+        min-width: 25px; 
+    }
+
+    // style desktop-js-div to "show' in js when share button is clicked 
 
     .js-div { 
-        // display: none;
-        flex-flow: row nowrap; 
-        justify-content: flex-start;
-        align-items: center; 
-        background-color: hsl(217, 19%, 35%);
-        border-bottom-right-radius: 16px;
-        border-bottom-left-radius: 16px;
-        height: auto; 
-        width: 100%; 
-        margin: 0 -20px 0 0; 
-        padding: 0 10px; 
+        visibility: hidden; // js default 
+        position: absolute;
+        bottom: 75px; 
+        left: 400px; 
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        max-width: 225px; 
+        border-radius: 12px;
     }
 
-    .share-button-js { // do I need a seperate button for js? 
-        // display: none; // js default 
-        background: url(../images/icon-share.svg) hsl(214, 17%, 51%) no-repeat center;
-        border: none; 
-        min-width: 30px; 
-        min-height: 30px; 
-        border-radius: 50%;
-        margin-left: 80px; // justify-self didn't work 
-        // I don't know how to stop the arrow icon & button bg from being the same color.
+    .js-div::before { // triangle arrow from share button 
+        content: ""; 
+        position: absolute; 
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent; 
+        border-right: 8px solid transparent; 
+        border-top: 8px solid hsl(217, 19%, 35%); 
+        bottom: -8px; 
+        right: 95px; 
+    }
+
+    .js-div.is-open { // triggered by js when share button is clicked on desktop  
+        visibility: visible; 
     }
 
     .share-text { 
-        text-transform: uppercase;
-        color: hsl(212, 23%, 69%);
-        letter-spacing: 7px; 
+        font-size: 0.7em; 
         margin: 20px; 
-        margin-right: 0; 
+    }
+
+    .share-button-js { 
+        display: none; // hide on desktop 
+    }
+
+    li { 
+        display: flex; 
     }
 
     .icons-list { 
-        display: flex; 
-        flex-shrink: 0; // this stops them shrinking but now they're too big 
-        color: white; 
-        background: hsl(217, 19%, 35%);
-        padding: 0; 
-        margin-left: 10px; 
+        flex-shrink: 1; 
+        margin-right: 0; 
+        margin-left: 0; 
+        align-items: center; // stopped them from being so tall 
 
         img { 
-            border-radius: 50%; // fb isn't round but 
-            margin: 5px; 
-            padding: 0 3px; 
-            max-width: 80%; 
+            padding: 0; 
+            margin-left: 5px; 
+            width: 20px; 
         }
     }
 
-    @media screen and (min-width: 768px) { 
+    // active to reveal js panel 
 
-        .card { 
-            max-width: 35rem; 
-            max-height: 250px; 
-            display: flex; 
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 0; 
-        }
+    // don't know how to get the arrow on the panel 
 
-        img { 
-            width: 40%;
-            border-top-right-radius: 0; 
-            border-bottom-left-radius: 16px; 
-            min-height: 100%; 
-            object-position: 0 50%; // never used before - must be in combo with object-fit 
-        }
-
-        .text-content { 
-            width: 60%; 
-        }
-
-        .title { 
-            font-size: 1.1em; 
-            margin-right: 15px; 
-        }
-        
-        .subtitle { 
-            font-size: 0.8em; 
-        }
-
-        .author-div { 
-
-            margin-top: -10px; 
-
-            .author, .date { 
-                font-size: 0.8em; 
-        }
-
-            .author-icon { 
-                width: 13%; 
-                height: 13%; 
-                margin: 10px;  
-            }
-
-            .author-date { 
-                margin-left: -5px; 
-            }
-        }
-
-        .share-button { 
-            margin-left: 125px; 
-            min-height: 25px; 
-            min-width: 25px; 
-        }
-
-        // style desktop-js-div to "show' in js when share button is clicked 
-
-        .js-div { 
-            // display: inline-block;
-            position: absolute;  
-            display: flex; 
-            flex-direction: row;
-            height: 40px;
-            // bottom: 350px;
-            left: 750px; 
-            max-width: 225px; 
-            // max-height: 70px; // you have this *and* height, not needed 
-            border-radius: 12px;
-            // height has no impact? cos of position? but it's still a flex item 
-        }
-
-        .share-text { 
-            font-size: 0.7em; 
-            margin: 20px; 
-        }
-
-        .share-button-js { 
-            display: none; // hide on desktop 
-        }
-
-        li { 
-            display: flex; 
-        }
-
-        .icons-list { 
-            flex-shrink: 1; 
-            margin-right: 0; 
-            margin-left: 0; 
-            align-items: center; // stopped them from being so tall 
-
-            img { 
-                padding: 0; 
-                margin-left: 5px; 
-                width: 20px; 
-            }
-        }
-
-        // active to reveal js panel 
-
-        // don't know how to get the arrow on the panel 
-
-        footer { 
-            position: absolute; 
-            bottom: 100px; 
-        }
+    footer { 
+        position: absolute; 
+        bottom: 100px; 
+    }
     }
